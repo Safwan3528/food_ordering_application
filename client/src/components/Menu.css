@@ -1,0 +1,119 @@
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-container h1, .menu-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.restaurant-grid, .menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.restaurant-card, .menu-item-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.restaurant-card:hover, .menu-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-card img, .menu-item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-card h2, .menu-item-card h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.restaurant-card p, .menu-item-card p {
+  margin: 10px;
+  color: #666;
+}
+
+.rating {
+  margin: 10px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.2em;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.half-filled {
+  position: relative;
+  display: inline-block;
+}
+
+.star.half-filled::after {
+  content: '★';
+  color: #ffc107;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+body.dark-mode .restaurant-card, body.dark-mode .menu-item-card {
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-mode .restaurant-card h2,
+body.dark-mode .restaurant-card p,
+body.dark-mode .menu-item-card h3,
+body.dark-mode .menu-item-card p {
+  color: #fff;
+}
+
+body.dark-mode .star {
+  color: #555;
+}
+
+body.dark-mode .star.filled,
+body.dark-mode .star.half-filled::after {
+  color: #ffd700;
+}
+
+body.dark-mode .back-button,
+body.dark-mode .order-button {
+  background-color: #45a049;
+}

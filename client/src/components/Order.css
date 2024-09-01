@@ -1,0 +1,82 @@
+.order-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.order-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.order-item-details {
+  flex-grow: 1;
+}
+
+.order-item-details h3 {
+  margin: 0 0 5px 0;
+}
+
+.order-item-details p {
+  margin: 0;
+  color: #666;
+}
+
+.remove-item-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.order-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.place-order-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Dark mode styles */
+body.dark-mode .order-item {
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-mode .order-item-details p {
+  color: #ccc;
+}
+
+body.dark-mode .remove-item-btn {
+  background-color: #d32f2f;
+}
+
+body.dark-mode .place-order-btn {
+  background-color: #45a049;
+}
